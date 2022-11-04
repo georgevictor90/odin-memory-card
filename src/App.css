@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: 50px 50px;
+  background-color: #0ae;
+  background-image: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 50%,
+    transparent
+  );
+  background-image: -moz-linear-gradient(
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 50%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 50%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 50%,
+    transparent
+  );
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 50%,
+    transparent
+  );
+}
+
+.App {
+  height: 100vh;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(148, 237, 255, 1) 35%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  /* background-color: rgba(47, 79, 79, 0.4); */
+  position: relative;
+}
+
+.main-grid {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "para scores"
+    "chara chara";
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.cards {
+  grid-area: chara;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.7rem;
+}
+
+p {
+  grid-area: para;
+  text-align: center;
+  line-height: 1.4;
+  font-family: "Francois One", sans-serif;
+  font-size: 1.2rem;
+  color: red;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px white, 0 0 5px whitesmoke;
+}
+.scores {
+  grid-area: scores;
+  text-align: end;
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  color: orangered;
+  text-shadow: 0 0 5px white, 0 0 8px whitesmoke;
+}
+.card {
+  background-color: white;
+  border-radius: 20px;
+  width: 150px;
+}
+.card--image {
+  border: 3px solid white;
+  width: 150px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card--text {
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #ccc;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: orangered;
+  color: white;
+}
